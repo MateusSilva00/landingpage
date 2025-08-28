@@ -17,6 +17,7 @@ export const translations = {
             features: "Funcionalidades",
             techStack: "Tecnologias",
             impact: "Impacto",
+            ai: "Inteligência Artificial",
             aiSection: "Inteligência Artificial",
             faceRecognition: "Reconhecimento Facial",
             results: "Resultados",
@@ -25,7 +26,9 @@ export const translations = {
             team: "Equipe",
             university: "Universidade Tecnológica Federal do Paraná",
             course: "Curso: Engenharia da Computação",
-            developed: "Desenvolvido por:"
+            developed: "Desenvolvido por:",
+            hardware: "Hardware",
+            software: "Software"
         },
         checkAI: {
             back: "← Voltar",
@@ -120,6 +123,7 @@ export const translations = {
             features: "Features",
             techStack: "Tech Stack",
             impact: "Impact",
+            ai: "Artificial Intelligence",
             aiSection: "Artificial Intelligence",
             faceRecognition: "Facial Recognition",
             results: "Results",
@@ -128,7 +132,9 @@ export const translations = {
             team: "Team",
             university: "Federal University of Technology - Paraná",
             course: "Course: Computer Engineering",
-            developed: "Developed by:"
+            developed: "Developed by:",
+            hardware: "Hardware",
+            software: "Software"
         },
         checkAI: {
             back: "← Back",
