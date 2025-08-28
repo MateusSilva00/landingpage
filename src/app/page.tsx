@@ -9,6 +9,100 @@ export default function Home() {
   const { isDarkMode, language } = useThemeLanguage()
   const t = translations[language]
 
+  const projects = {
+    pt: [
+      {
+        title: "Rede Social Universitária",
+        description: "Sistema web para integração entre alunos (postagens, perfis, comentários).",
+        tech: "Node.js, PostgreSQL (Prisma), Express, Heroku",
+        result: "Aplicação funcional em produção com autenticação e CRUD completo."
+      },
+      {
+        title: "Espelho Inteligente",
+        description: "Espelho com display, assistente de voz, login por reconhecimento facial e sensores.",
+        tech: "Python, Raspberry Pi, OpenAI, APIs externas",
+        result: "Interface interativa e automação com IA integrada a hardware embarcado."
+      },
+      {
+        title: "Checkout Automatizado com Visão Computacional",
+        description: "Substituição de código de barras por classificação de imagem em supermercados.",
+        tech: "Python, Raspberry Pi, Django, OpenAI API",
+        result: "Detecção em tempo real (>85% acurácia) e cálculo automático em interface de pagamento."
+      }
+    ],
+    en: [
+      {
+        title: "University Social Network",
+        description: "Web system for student integration (posts, profiles, comments).",
+        tech: "Node.js, PostgreSQL (Prisma), Express, Heroku",
+        result: "Functional production application with authentication and complete CRUD."
+      },
+      {
+        title: "Smart Mirror",
+        description: "Mirror with display, voice assistant, facial recognition login and sensors.",
+        tech: "Python, Raspberry Pi, OpenAI, External APIs",
+        result: "Interactive interface and automation with AI integrated to embedded hardware."
+      },
+      {
+        title: "Automated Checkout with Computer Vision",
+        description: "Barcode replacement using image classification in supermarkets.",
+        tech: "Python, Raspberry Pi, Django, OpenAI API",
+        result: "Real-time detection (>85% accuracy) and automatic calculation in payment interface."
+      }
+    ]
+  };
+
+  const experiences = {
+    pt: [
+      {
+        role: "Engenheiro de Dados Júnior",
+        company: "Driva",
+        period: "Fev 2024 – Nov 2024",
+        items: [
+          "Desenvolvimento de pipelines ETL/ELT escaláveis com Airflow, reduzindo em 30% o tempo de execução.",
+          "Administração de permissões e acessos para +20 usuários, garantindo segurança e integridade.",
+          "Mentoria de estagiários com treinamentos práticos, acelerando a curva de aprendizado.",
+          "Administração de ambientes com terabytes de dados e tabelas com +50M linhas."
+        ]
+      },
+      {
+        role: "Estagiário em DataOps",
+        company: "Driva",
+        period: "Fev 2022 – Jan 2024",
+        items: [
+          "Coleta avançada de dados com Scrapy, BeautifulSoup e Selenium (LinkedIn, Instagram, Facebook).",
+          "Ingestão e processamento com Azure Data Factory + PySpark para grandes volumes de dados.",
+          "Catalogação e documentação de dados no OpenMetadata.",
+          "Suporte a bancos NoSQL como ElasticSearch e MongoDB."
+        ]
+      }
+    ],
+    en: [
+      {
+        role: "Junior Data Engineer",
+        company: "Driva",
+        period: "Feb 2024 – Nov 2024",
+        items: [
+          "Development of scalable ETL/ELT pipelines with Airflow, reducing execution time by 30%.",
+          "Management of permissions and access for +20 users, ensuring security and integrity.",
+          "Mentoring interns with practical training, accelerating the learning curve.",
+          "Administration of environments with terabytes of data and tables with +50M rows."
+        ]
+      },
+      {
+        role: "DataOps Intern",
+        company: "Driva",
+        period: "Feb 2022 – Jan 2024",
+        items: [
+          "Advanced data collection with Scrapy, BeautifulSoup and Selenium (LinkedIn, Instagram, Facebook).",
+          "Ingestion and processing with Azure Data Factory + PySpark for large data volumes.",
+          "Data cataloging and documentation in OpenMetadata.",
+          "Support for NoSQL databases like ElasticSearch and MongoDB."
+        ]
+      }
+    ]
+  };
+
   const aboutMe = {
     pt: {
       title: "Sobre Mim",
@@ -28,32 +122,6 @@ export default function Home() {
     }
   };
 
-  const projects = [
-    {
-      title: "Rede Social Universitária",
-      description:
-        "Sistema web para integração entre alunos (postagens, perfis, comentários).",
-      tech: "Node.js, PostgreSQL (Prisma), Express, Heroku",
-      result: "Aplicação funcional em produção com autenticação e CRUD completo."
-    },
-    {
-      title: "Espelho Inteligente",
-      description:
-        "Espelho com display, assistente de voz, login por reconhecimento facial e sensores.",
-      tech: "Python, Raspberry Pi, OpenAI, APIs externas",
-      result:
-        "Interface interativa e automação com IA integrada a hardware embarcado."
-    },
-    {
-      title: "Checkout Automatizado com Visão Computacional",
-      description:
-        "Substituição de código de barras por classificação de imagem em supermercados.",
-      tech: "Python, Raspberry Pi, Django, OpenAI API",
-      result:
-        "Detecção em tempo real (>85% acurácia) e cálculo automático em interface de pagamento."
-    }
-  ];
-
   const skills = [
     "Python", 
     "PostgreSQL",
@@ -70,31 +138,6 @@ export default function Home() {
     "GCP",
     "ElasticSearch", 
     "Machine Learning", "CI/CD", "Git", 
-  ];
-
-  const experiences = [
-    {
-      role: "Engenheiro de Dados Júnior",
-      company: "Driva",
-      period: "Fev 2024 – Nov 2024",
-      items: [
-        "Desenvolvimento de pipelines ETL/ELT escaláveis com Airflow, reduzindo em 30% o tempo de execução.",
-        "Administração de permissões e acessos para +20 usuários, garantindo segurança e integridade.",
-        "Mentoria de estagiários com treinamentos práticos, acelerando a curva de aprendizado.",
-        "Administração de ambientes com terabytes de dados e tabelas com +50M linhas."
-      ]
-    },
-    {
-      role: "Estagiário em DataOps",
-      company: "Driva",
-      period: "Fev 2022 – Jan 2024",
-      items: [
-        "Coleta avançada de dados com Scrapy, BeautifulSoup e Selenium (LinkedIn, Instagram, Facebook).",
-        "Ingestão e processamento com Azure Data Factory + PySpark para grandes volumes de dados.",
-        "Catalogação e documentação de dados no OpenMetadata.",
-        "Suporte a bancos NoSQL como ElasticSearch e MongoDB."
-      ]
-    }
   ];
 
   return (
@@ -157,8 +200,10 @@ export default function Home() {
 
         {/* EXPERIÊNCIA */}
         <section className="space-y-8">
-          <h2 className={`text-2xl font-semibold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>Experiência</h2>
-          {experiences.map((exp) => (
+          <h2 className={`text-2xl font-semibold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
+            {t.experience}
+          </h2>
+          {(language === 'pt' ? experiences.pt : experiences.en).map((exp) => (
             <div key={exp.role} className={`${isDarkMode ? 'bg-white/5' : 'bg-white/70'} rounded-2xl p-6 border ${isDarkMode ? 'border-white/10' : 'border-slate-200'} backdrop-blur-3xl`}>
               <h3 className="text-xl font-bold">{exp.role} | {exp.company}</h3>
               <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-slate-500'} mb-4`}>{exp.period}</p>
@@ -171,14 +216,20 @@ export default function Home() {
 
         {/* PROJETOS */}
         <section className="space-y-8">
-          <h2 className={`text-2xl font-semibold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>Projetos Relevantes</h2>
+          <h2 className={`text-2xl font-semibold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
+            {t.relevantProjects}
+          </h2>
           <div className="grid gap-6 md:grid-cols-2">
-            {projects.map((proj) => (
+            {(language === 'pt' ? projects.pt : projects.en).map((proj) => (
               <div key={proj.title} className={`p-6 ${isDarkMode ? 'bg-white/5' : 'bg-white/70'} rounded-2xl border ${isDarkMode ? 'border-white/10' : 'border-slate-200'} hover:border-blue-500/50 transition`}>
                 <h3 className="text-xl font-semibold mb-2">{proj.title}</h3>
                 <p className={isDarkMode ? 'text-gray-300' : 'text-slate-700'}>{proj.description}</p>
-                <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-slate-500'} mt-2`}>Tech: {proj.tech}</p>
-                <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-slate-500'}`}>Resultado: {proj.result}</p>
+                <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-slate-500'} mt-2`}>
+                  {language === 'pt' ? 'Tech:' : 'Tech:'} {proj.tech}
+                </p>
+                <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-slate-500'}`}>
+                  {language === 'pt' ? 'Resultado:' : 'Result:'} {proj.result}
+                </p>
               </div>
             ))}
           </div>
@@ -199,11 +250,25 @@ export default function Home() {
 
         {/* FORMAÇÃO */}
         <section className={`space-y-4 backdrop-blur-3xl ${isDarkMode ? 'bg-white/5' : 'bg-white/70'} rounded-2xl p-8 border ${isDarkMode ? 'border-white/10' : 'border-slate-200'}`}>
-          <h2 className={`text-2xl font-semibold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>Formação Acadêmica</h2>
-          <p className="text-lg font-medium">Engenharia da Computação — UTFPR (2020 – 2026)</p>
+          <h2 className={`text-2xl font-semibold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
+            {t.education}
+          </h2>
+          <p className="text-lg font-medium">
+            {language === 'pt' 
+              ? "Engenharia da Computação — UTFPR (2020 – 2026)"
+              : "Computer Engineering — UTFPR (2020 – 2026)"}
+          </p>
           <ul className={`list-disc list-inside ${isDarkMode ? 'text-gray-300' : 'text-slate-700'} mt-2 space-y-2`}>
-            <li>Co-fundador do Centro Acadêmico de Engenharia da Computação.</li>
-            <li>Instrutor em cursos de Python e Web Scraping na Semana Acadêmica.</li>
+            <li>
+              {language === 'pt'
+                ? "Co-fundador do Centro Acadêmico de Engenharia da Computação."
+                : "Co-founder of the Computer Engineering Academic Center."}
+            </li>
+            <li>
+              {language === 'pt'
+                ? "Instrutor em cursos de Python e Web Scraping na Semana Acadêmica."
+                : "Instructor in Python and Web Scraping courses during Academic Week."}
+            </li>
           </ul>
         </section>
       </main>
