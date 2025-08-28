@@ -11,7 +11,22 @@ export const translations = {
         academicTitle: "Engenharia da Computação — UTFPR (2020 – 2026)",
         tech: "Tech:",
         result: "Resultado:",
-        stackAndSkills: "Stack & Skills"
+        stackAndSkills: "Stack & Skills",
+        smartMirror: {
+            back: "← Voltar",
+            features: "Funcionalidades",
+            techStack: "Tecnologias",
+            impact: "Impacto",
+            aiSection: "Inteligência Artificial",
+            faceRecognition: "Reconhecimento Facial",
+            results: "Resultados",
+            video: "Vídeo do Projeto",
+            watchVideo: "Assistir no YouTube",
+            team: "Equipe",
+            university: "Universidade Tecnológica Federal do Paraná",
+            course: "Curso: Engenharia da Computação",
+            developed: "Desenvolvido por:"
+        }
     },
     en: {
         role: "Software Engineer | Data Specialist",
@@ -25,6 +40,21 @@ export const translations = {
         academicTitle: "Computer Engineering — UTFPR (2020 – 2026)",
         tech: "Tech:",
         result: "Result:",
-        stackAndSkills: "Stack & Skills"
+        stackAndSkills: "Stack & Skills",
+        smartMirror: {
+            back: "← Back",
+            features: "Features",
+            techStack: "Tech Stack",
+            impact: "Impact",
+            aiSection: "Artificial Intelligence",
+            faceRecognition: "Facial Recognition",
+            results: "Results",
+            video: "Project Video",
+            watchVideo: "Watch on YouTube",
+            team: "Team",
+            university: "Federal University of Technology - Paraná",
+            course: "Course: Computer Engineering",
+            developed: "Developed by:"
+        }
     }
 }
