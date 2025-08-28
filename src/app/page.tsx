@@ -12,6 +12,12 @@ export default function Home() {
   const projects = {
     pt: [
       {
+        title: "Sistema de Comunicação 4D-PAM5",
+        description: "Sistema de comunicação que implementa o algoritmo de codificação de linha 4D-PAM5, com criptografia e interface gráfica.",
+        tech: "Python, Tkinter, Matplotlib, NumPy",
+        result: "Sistema completo de comunicação com visualização em tempo real."
+      },
+      {
         title: "Dashboard de Sistema Operacional",
         description: "Dashboard interativo para monitoramento de recursos do sistema operacional Linux.",
         tech: "Python, Tkinter, Matplotlib, /proc filesystem",
@@ -37,6 +43,12 @@ export default function Home() {
       }
     ],
     en: [
+      {
+        title: "4D-PAM5 Communication System",
+        description: "Communication system implementing the 4D-PAM5 line coding algorithm, with encryption and graphical interface.",
+        tech: "Python, Tkinter, Matplotlib, NumPy",
+        result: "Complete communication system with real-time visualization."
+      },
       {
         title: "Operating System Dashboard",
         description: "Interactive dashboard for monitoring Linux operating system resources.",
@@ -234,9 +246,10 @@ export default function Home() {
           <div className="grid gap-6 md:grid-cols-2">
             {(language === 'pt' ? projects.pt : projects.en).map((proj) => (
               <Link 
-                key={proj.title} 
                 href={
-                  proj.title === "Dashboard de Sistema Operacional" || proj.title === "Operating System Dashboard"
+                  proj.title === "Sistema de Comunicação 4D-PAM5" || proj.title === "4D-PAM5 Communication System"
+                    ? '/projects/pam5'
+                    : proj.title === "Dashboard de Sistema Operacional" || proj.title === "Operating System Dashboard"
                     ? '/projects/os-dashboard'
                     : proj.title === "Espelho Inteligente" || proj.title === "Smart Mirror"
                     ? '/projects/smart-mirror'
@@ -244,6 +257,7 @@ export default function Home() {
                     ? '/projects/checkai'
                     : '#'
                 }
+                key={proj.title}
               >
                 <div className={`p-6 ${isDarkMode ? 'bg-white/5' : 'bg-white/70'} rounded-2xl border ${isDarkMode ? 'border-white/10' : 'border-slate-200'} hover:border-blue-500/50 transition cursor-pointer`}>
                   <h3 className="text-xl font-semibold mb-2">{proj.title}</h3>

@@ -72,6 +72,34 @@ export const translations = {
                 "Matplotlib para visualizações",
                 "Sistema de arquivos /proc do Linux"
             ]
+        },
+        pam5: {
+            back: "← Voltar",
+            title: "Sistema de Comunicação 4D-PAM5",
+            description: "Sistema de comunicação que implementa o algoritmo de codificação de linha 4D-PAM5, com criptografia e interface gráfica.",
+            features: "Funcionalidades",
+            howToRun: "Como Executar",
+            structure: "Estrutura do Projeto",
+            mainFeatures: [
+                "Simulação de Cliente e Servidor (Host A e Host B)",
+                "Criptografia e descriptografia de mensagens",
+                "Codificação e decodificação de linha 4D-PAM5",
+                "Visualização de forma de onda para envio e recebimento",
+                "Interface gráfica com Tkinter"
+            ],
+            tech: [
+                "Python 3.8+",
+                "Tkinter para interface gráfica",
+                "Matplotlib para visualização",
+                "Numpy para processamento"
+            ],
+            github: "Ver no GitHub",
+            executionSteps: [
+                "Clique em 'HOST B (Servidor)' para iniciar o servidor",
+                "Clique em 'HOST A (Cliente)' para enviar uma mensagem",
+                "Digite sua mensagem e chave de criptografia",
+                "O processo e formas de onda serão exibidos em ambos os lados"
+            ]
         }
     },
     en: {
@@ -146,6 +174,34 @@ export const translations = {
                 "Tkinter for GUI",
                 "Matplotlib for visualizations",
                 "Linux /proc filesystem"
+            ]
+        },
+        pam5: {
+            back: "← Back",
+            title: "4D-PAM5 Communication System",
+            description: "Communication system implementing the 4D-PAM5 line coding algorithm, with encryption and graphical interface.",
+            features: "Features",
+            howToRun: "How to Run",
+            structure: "Project Structure",
+            mainFeatures: [
+                "Client and Server simulation (Host A and Host B)",
+                "Message encryption and decryption",
+                "4D-PAM5 line coding and decoding",
+                "Waveform visualization for both sending and receiving",
+                "Graphical interface using Tkinter"
+            ],
+            tech: [
+                "Python 3.8+",
+                "Tkinter for GUI",
+                "Matplotlib for visualization",
+                "Numpy for processing"
+            ],
+            github: "View on GitHub",
+            executionSteps: [
+                "Click 'HOST B (Server)' to start the server",
+                "Click 'HOST A (Client)' to send a message",
+                "Enter your message and encryption key",
+                "The process and waveforms will be shown on both sides"
             ]
         }
     }
