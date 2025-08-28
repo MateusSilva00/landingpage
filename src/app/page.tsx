@@ -12,6 +12,12 @@ export default function Home() {
   const projects = {
     pt: [
       {
+        title: "Dashboard de Sistema Operacional",
+        description: "Dashboard interativo para monitoramento de recursos do sistema operacional Linux.",
+        tech: "Python, Tkinter, Matplotlib, /proc filesystem",
+        result: "Sistema completo de monitoramento com visualizações em tempo real."
+      },
+      {
         title: "Rede Social Universitária",
         description: "Sistema web para integração entre alunos (postagens, perfis, comentários).",
         tech: "Node.js, PostgreSQL (Prisma), Express, Heroku",
@@ -31,6 +37,12 @@ export default function Home() {
       }
     ],
     en: [
+      {
+        title: "Operating System Dashboard",
+        description: "Interactive dashboard for monitoring Linux operating system resources.",
+        tech: "Python, Tkinter, Matplotlib, /proc filesystem",
+        result: "Complete monitoring system with real-time visualizations."
+      },
       {
         title: "University Social Network",
         description: "Web system for student integration (posts, profiles, comments).",
@@ -224,7 +236,9 @@ export default function Home() {
               <Link 
                 key={proj.title} 
                 href={
-                  proj.title === "Espelho Inteligente" || proj.title === "Smart Mirror"
+                  proj.title === "Dashboard de Sistema Operacional" || proj.title === "Operating System Dashboard"
+                    ? '/projects/os-dashboard'
+                    : proj.title === "Espelho Inteligente" || proj.title === "Smart Mirror"
                     ? '/projects/smart-mirror'
                     : proj.title === "Checkout Automatizado com Visão Computacional" || proj.title === "Automated Checkout with Computer Vision"
                     ? '/projects/checkai'

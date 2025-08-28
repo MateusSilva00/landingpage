@@ -47,6 +47,31 @@ export const translations = {
             resultsContent: "Sistema funcional com reconhecimento preciso de produtos, interface intuitiva e estrutura robusta. A solução oferece uma alternativa eficiente aos códigos de barras tradicionais.",
             video: "Vídeo do Projeto",
             watchVideo: "Assistir no YouTube"
+        },
+        osDashboard: {
+            back: "← Voltar",
+            title: "Dashboard de Sistema Operacional",
+            description: "Dashboard interativo para monitoramento de recursos do sistema operacional Linux.",
+            overview: "Visão Geral",
+            features: "Funcionalidades",
+            techStack: "Tecnologias",
+            architecture: "Arquitetura",
+            setup: "Instalação",
+            demo: "Demonstração",
+            github: "Ver no GitHub",
+            mainFeatures: [
+                "Visualização em tempo real de CPU, memória, processos e threads",
+                "Listagem dos principais processos e suas threads",
+                "Monitoramento de partições de disco e sistema de arquivos",
+                "Navegação em diretórios e exibição de detalhes de arquivos",
+                "Busca de arquivos por padrão de nome"
+            ],
+            tech: [
+                "Python 3.11+",
+                "Tkinter para interface gráfica",
+                "Matplotlib para visualizações",
+                "Sistema de arquivos /proc do Linux"
+            ]
         }
     },
     en: {
@@ -97,6 +122,31 @@ export const translations = {
             resultsContent: "Functional system with accurate product recognition, intuitive interface, and robust structure. The solution offers an efficient alternative to traditional barcodes.",
             video: "Project Video",
             watchVideo: "Watch on YouTube"
+        },
+        osDashboard: {
+            back: "← Back",
+            title: "Operating System Dashboard",
+            description: "Interactive dashboard for monitoring Linux operating system resources.",
+            overview: "Overview",
+            features: "Features",
+            techStack: "Tech Stack",
+            architecture: "Architecture",
+            setup: "Setup",
+            demo: "Demo",
+            github: "View on GitHub",
+            mainFeatures: [
+                "Real-time visualization of CPU, memory, processes and threads",
+                "Listing of main processes and their threads",
+                "Disk partitions and file system monitoring",
+                "Directory navigation and file details display",
+                "File search by name pattern"
+            ],
+            tech: [
+                "Python 3.11+",
+                "Tkinter for GUI",
+                "Matplotlib for visualizations",
+                "Linux /proc filesystem"
+            ]
         }
     }
 }
