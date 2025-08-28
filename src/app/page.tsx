@@ -221,24 +221,27 @@ export default function Home() {
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
             {(language === 'pt' ? projects.pt : projects.en).map((proj) => (
-              <div 
+              <Link 
                 key={proj.title} 
-                className={`p-6 ${isDarkMode ? 'bg-white/5' : 'bg-white/70'} rounded-2xl border ${isDarkMode ? 'border-white/10' : 'border-slate-200'} hover:border-blue-500/50 transition cursor-pointer`}
-                onClick={() => {
-                  if (proj.title === "Espelho Inteligente" || proj.title === "Smart Mirror") {
-                    window.location.href = '/projects/smart-mirror';
-                  }
-                }}
+                href={
+                  proj.title === "Espelho Inteligente" || proj.title === "Smart Mirror"
+                    ? '/projects/smart-mirror'
+                    : proj.title === "Checkout Automatizado com Visão Computacional" || proj.title === "Automated Checkout with Computer Vision"
+                    ? '/projects/checkai'
+                    : '#'
+                }
               >
-                <h3 className="text-xl font-semibold mb-2">{proj.title}</h3>
-                <p className={isDarkMode ? 'text-gray-300' : 'text-slate-700'}>{proj.description}</p>
-                <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-slate-500'} mt-2`}>
-                  {language === 'pt' ? 'Tech:' : 'Tech:'} {proj.tech}
-                </p>
-                <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-slate-500'}`}>
-                  {language === 'pt' ? 'Resultado:' : 'Result:'} {proj.result}
-                </p>
-              </div>
+                <div className={`p-6 ${isDarkMode ? 'bg-white/5' : 'bg-white/70'} rounded-2xl border ${isDarkMode ? 'border-white/10' : 'border-slate-200'} hover:border-blue-500/50 transition cursor-pointer`}>
+                  <h3 className="text-xl font-semibold mb-2">{proj.title}</h3>
+                  <p className={isDarkMode ? 'text-gray-300' : 'text-slate-700'}>{proj.description}</p>
+                  <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-slate-500'} mt-2`}>
+                    {language === 'pt' ? 'Tech:' : 'Tech:'} {proj.tech}
+                  </p>
+                  <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-slate-500'}`}>
+                    {language === 'pt' ? 'Resultado:' : 'Result:'} {proj.result}
+                  </p>
+                </div>
+              </Link>
             ))}
           </div>
         </section>

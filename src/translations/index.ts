@@ -26,6 +26,27 @@ export const translations = {
             university: "Universidade Tecnológica Federal do Paraná",
             course: "Curso: Engenharia da Computação",
             developed: "Desenvolvido por:"
+        },
+        checkAI: {
+            back: "← Voltar",
+            title: "CheckAI - Sistema de Reconhecimento de Produtos com IA",
+            description: "Sistema de auto-atendimento para supermercados que utiliza Inteligência Artificial para reconhecimento e classificação de produtos sem a necessidade de códigos de barras.",
+            overview: "Visão Geral",
+            hardware: "Hardware",
+            software: "Software",
+            demo: "Demonstração",
+            features: "Funcionalidades",
+            github: "Ver no GitHub",
+            hardwareItems: {
+                raspberry: "Raspberry Pi 3 Model B+ como unidade principal de processamento",
+                camera: "Webcam Full HD USB para captura de imagens em alta qualidade",
+                balance: "Módulo de balança digital HX711 com célula de carga de precisão",
+                case: "Case personalizado impresso em 3D projetado no Fusion 360"
+            },
+            results: "Resultados",
+            resultsContent: "Sistema funcional com reconhecimento preciso de produtos, interface intuitiva e estrutura robusta. A solução oferece uma alternativa eficiente aos códigos de barras tradicionais.",
+            video: "Vídeo do Projeto",
+            watchVideo: "Assistir no YouTube"
         }
     },
     en: {
@@ -55,6 +76,27 @@ export const translations = {
             university: "Federal University of Technology - Paraná",
             course: "Course: Computer Engineering",
             developed: "Developed by:"
+        },
+        checkAI: {
+            back: "← Back",
+            title: "CheckAI - AI-Powered Product Recognition System",
+            description: "Self-service system for supermarkets that uses Artificial Intelligence for product recognition and classification without the need for barcodes.",
+            overview: "Overview",
+            hardware: "Hardware",
+            software: "Software",
+            demo: "Demo",
+            features: "Features",
+            github: "View on GitHub",
+            hardwareItems: {
+                raspberry: "Raspberry Pi 3 Model B+ as the main processing unit",
+                camera: "Full HD USB Webcam for high-quality image capture",
+                balance: "HX711 Digital Balance Module with precision load cell",
+                case: "Custom 3D printed case designed in Fusion 360"
+            },
+            results: "Results",
+            resultsContent: "Functional system with accurate product recognition, intuitive interface, and robust structure. The solution offers an efficient alternative to traditional barcodes.",
+            video: "Project Video",
+            watchVideo: "Watch on YouTube"
         }
     }
 }
