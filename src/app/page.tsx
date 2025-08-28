@@ -24,12 +24,6 @@ export default function Home() {
         result: "Sistema completo de monitoramento com visualizações em tempo real."
       },
       {
-        title: "Rede Social Universitária",
-        description: "Sistema web para integração entre alunos (postagens, perfis, comentários).",
-        tech: "Node.js, PostgreSQL (Prisma), Express, Heroku",
-        result: "Aplicação funcional em produção com autenticação e CRUD completo."
-      },
-      {
         title: "Espelho Inteligente",
         description: "Espelho com display, assistente de voz, login por reconhecimento facial e sensores.",
         tech: "Python, Raspberry Pi, OpenAI, APIs externas",
@@ -40,6 +34,12 @@ export default function Home() {
         description: "Substituição de código de barras por classificação de imagem em supermercados.",
         tech: "Python, Raspberry Pi, Django, OpenAI API",
         result: "Detecção em tempo real (>85% acurácia) e cálculo automático em interface de pagamento."
+      },
+      {
+        title: "Rede Social Universitária",
+        description: "Sistema web para integração entre alunos (postagens, perfis, comentários).",
+        tech: "Node.js, PostgreSQL (Prisma), Express, Heroku",
+        result: "Aplicação funcional em produção com autenticação e CRUD completo."
       }
     ],
     en: [
@@ -56,12 +56,6 @@ export default function Home() {
         result: "Complete monitoring system with real-time visualizations."
       },
       {
-        title: "University Social Network",
-        description: "Web system for student integration (posts, profiles, comments).",
-        tech: "Node.js, PostgreSQL (Prisma), Express, Heroku",
-        result: "Functional production application with authentication and complete CRUD."
-      },
-      {
         title: "Smart Mirror",
         description: "Mirror with display, voice assistant, facial recognition login and sensors.",
         tech: "Python, Raspberry Pi, OpenAI, External APIs",
@@ -72,6 +66,12 @@ export default function Home() {
         description: "Barcode replacement using image classification in supermarkets.",
         tech: "Python, Raspberry Pi, Django, OpenAI API",
         result: "Real-time detection (>85% accuracy) and automatic calculation in payment interface."
+      },
+      {
+        title: "University Social Network",
+        description: "Web system for student integration (posts, profiles, comments).",
+        tech: "Node.js, PostgreSQL (Prisma), Express, Heroku",
+        result: "Functional production application with authentication and complete CRUD."
       }
     ]
   };
@@ -159,7 +159,6 @@ export default function Home() {
     "Docker", 
     "Azure", 
     "Bucket AWS", 
-    "GCP",
     "ElasticSearch", 
     "Machine Learning", "CI/CD", "Git", 
   ];
@@ -169,10 +168,10 @@ export default function Home() {
       <ThemeLanguageToggle />
       <div className={`absolute inset-0 ${isDarkMode ? 'bg-gradient-to-tr from-blue-900/20 via-transparent to-purple-900/20' : 'bg-gradient-to-tr from-blue-100/30 via-transparent to-purple-100/30'} animate-gradient-xy`}></div>
 
-      <main className="relative max-w-6xl mx-auto px-6 py-24 space-y-24">
+      <main className="relative mx-auto px-4 sm:px-6 py-12 sm:py-24 space-y-12 sm:space-y-24">
         {/* HERO */}
         <section className="text-center space-y-6">
-          <div className="relative w-40 h-40 mx-auto mb-6">
+          <div className="relative w-32 sm:w-40 h-32 sm:h-40 mx-auto mb-6">
             <Image
               src="/linkedin.jpg"
               alt="Mateus Silva"
@@ -181,28 +180,28 @@ export default function Home() {
               priority
             />
           </div>
-          <h1 className="text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
+          <h1 className="text-4xl sm:text-6xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500">
             Mateus Silva
           </h1>
-          <p className="text-xl text-gray-300">
+          <p className="text-lg sm:text-xl text-gray-300">
             {t.role}
           </p>
-          <div className="flex justify-center gap-4 mt-4">
+          <div className="flex flex-wrap justify-center gap-3 sm:gap-4 mt-4">
             <Link href="mailto:mateus.sgrilli@gmail.com"
-              className="px-6 py-3 rounded-xl border border-blue-500/40 hover:bg-blue-500/10 transition">
+              className="px-4 sm:px-6 py-2 sm:py-3 rounded-xl border border-blue-500/40 hover:bg-blue-500/10 transition text-sm sm:text-base">
               Email
             </Link>
             <Link href="https://www.linkedin.com/in/mateus-silva00/" target="_blank"
-              className="px-6 py-3 rounded-xl border border-blue-500/40 hover:bg-blue-500/10 transition">
+              className="px-4 sm:px-6 py-2 sm:py-3 rounded-xl border border-blue-500/40 hover:bg-blue-500/10 transition text-sm sm:text-base">
               LinkedIn
             </Link>
             <Link href="https://github.com/mateusSilva00" target="_blank"
-              className="px-6 py-3 rounded-xl border border-blue-500/40 hover:bg-blue-500/10 transition">
+              className="px-4 sm:px-6 py-2 sm:py-3 rounded-xl border border-blue-500/40 hover:bg-blue-500/10 transition text-sm sm:text-base">
               GitHub
             </Link>
             <Link href="https://api.whatsapp.com/send/?phone=5513997085228"
               target="_blank"
-              className="px-6 py-3 rounded-xl border border-green-500/40 hover:bg-green-500/10 transition">
+              className="px-4 sm:px-6 py-2 sm:py-3 rounded-xl border border-green-500/40 hover:bg-green-500/10 transition text-sm sm:text-base">
               WhatsApp
             </Link>
           </div>
@@ -227,23 +226,25 @@ export default function Home() {
           <h2 className={`text-2xl font-semibold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
             {t.experience}
           </h2>
-          {(language === 'pt' ? experiences.pt : experiences.en).map((exp) => (
-            <div key={exp.role} className={`${isDarkMode ? 'bg-white/5' : 'bg-white/70'} rounded-2xl p-6 border ${isDarkMode ? 'border-white/10' : 'border-slate-200'} backdrop-blur-3xl`}>
-              <h3 className="text-xl font-bold">{exp.role} | {exp.company}</h3>
-              <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-slate-500'} mb-4`}>{exp.period}</p>
-              <ul className={`list-disc list-inside space-y-2 ${isDarkMode ? 'text-gray-300' : 'text-slate-700'}`}>
-                {exp.items.map((item, i) => <li key={i}>{item}</li>)}
-              </ul>
-            </div>
-          ))}
+          <div className="space-y-4 sm:space-y-6">
+            {(language === 'pt' ? experiences.pt : experiences.en).map((exp) => (
+              <div key={exp.role} className={`p-4 sm:p-6 ${isDarkMode ? 'bg-white/5' : 'bg-white/70'} rounded-xl sm:rounded-2xl border ${isDarkMode ? 'border-white/10' : 'border-slate-200'} backdrop-blur-3xl`}>
+                <h3 className="text-lg sm:text-xl font-bold">{exp.role} | {exp.company}</h3>
+                <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-slate-500'} mb-4`}>{exp.period}</p>
+                <ul className={`list-disc list-inside space-y-2 ${isDarkMode ? 'text-gray-300' : 'text-slate-700'}`}>
+                  {exp.items.map((item, i) => <li key={i}>{item}</li>)}
+                </ul>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* PROJETOS */}
-        <section className="space-y-8">
-          <h2 className={`text-2xl font-semibold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
+        <section className="space-y-6 sm:space-y-8">
+          <h2 className={`text-xl sm:text-2xl font-semibold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
             {t.relevantProjects}
           </h2>
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-4 sm:gap-6 grid-cols-1 sm:grid-cols-2">
             {(language === 'pt' ? projects.pt : projects.en).map((proj) => (
               <Link 
                 href={
@@ -275,12 +276,12 @@ export default function Home() {
         </section>
 
         {/* HABILIDADES */}
-        <section className="space-y-8">
-          <h2 className={`text-2xl font-semibold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>Stack & Skills</h2>
-          <div className="flex flex-wrap gap-3">
+        <section className="space-y-6 sm:space-y-8">
+          <h2 className={`text-xl sm:text-2xl font-semibold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>Stack & Skills</h2>
+          <div className="flex flex-wrap gap-2 sm:gap-3">
             {skills.map((skill) => (
               <span key={skill}
-                className={`px-4 py-2 ${isDarkMode ? 'bg-gradient-to-r from-gray-900 to-gray-800' : 'bg-gradient-to-r from-slate-100 to-white'} rounded-xl border ${isDarkMode ? 'border-white/10' : 'border-slate-200'} hover:border-blue-500/50 transition-all hover:scale-105 shadow-md shadow-black/5 text-sm`}>
+                className={`px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm ${isDarkMode ? 'bg-gradient-to-r from-gray-900 to-gray-800' : 'bg-gradient-to-r from-slate-100 to-white'} rounded-xl border ${isDarkMode ? 'border-white/10' : 'border-slate-200'} hover:border-blue-500/50 transition-all hover:scale-105 shadow-md shadow-black/5`}>
                 {skill}
               </span>
             ))}
@@ -288,7 +289,7 @@ export default function Home() {
         </section>
 
         {/* FORMAÇÃO */}
-        <section className={`space-y-4 backdrop-blur-3xl ${isDarkMode ? 'bg-white/5' : 'bg-white/70'} rounded-2xl p-8 border ${isDarkMode ? 'border-white/10' : 'border-slate-200'}`}>
+        <section className={`space-y-4 p-4 sm:p-8 backdrop-blur-3xl ${isDarkMode ? 'bg-white/5' : 'bg-white/70'} rounded-2xl border ${isDarkMode ? 'border-white/10' : 'border-slate-200'}`}>
           <h2 className={`text-2xl font-semibold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
             {t.education}
           </h2>
