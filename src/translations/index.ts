@@ -6,7 +6,8 @@ export const translations = {
         experience: "Experiência",
         relevantProjects: "Projetos Relevantes",
         skills: "Stack & Skills",
-        education: "Formação Acadêmica"
+        education: "Formação Acadêmica",
+        aboutMe: "Sobre Mim"
     },
     en: {
         role: "Software Engineer | Data Specialist",
@@ -15,6 +16,7 @@ export const translations = {
         experience: "Experience",
         relevantProjects: "Relevant Projects",
         skills: "Stack & Skills",
-        education: "Education"
+        education: "Education",
+        aboutMe: "About Me"
     }
 }

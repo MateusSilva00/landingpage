@@ -9,30 +9,24 @@ export default function Home() {
   const { isDarkMode, language } = useThemeLanguage()
   const t = translations[language]
 
-  const experiences = [
-    {
-      role: "Engenheiro de Dados Júnior",
-      company: "Driva",
-      period: "Fev 2024 – Nov 2024",
-      items: [
-        "Desenvolvimento de pipelines ETL/ELT escaláveis com Airflow, reduzindo em 30% o tempo de execução.",
-        "Administração de permissões e acessos para +20 usuários, garantindo segurança e integridade.",
-        "Mentoria de estagiários com treinamentos práticos, acelerando a curva de aprendizado.",
-        "Administração de ambientes com terabytes de dados e tabelas com +50M linhas."
+  const aboutMe = {
+    pt: {
+      title: "Sobre Mim",
+      content: [
+        "Sou estudante do 7º período de Engenharia da Computação na UTFPR, onde tenho me destacado por minha curiosidade nata e paixão pela tecnologia.",
+        "Como um entusiasta do aprendizado contínuo, estou constantemente me desafiando a dominar novas tecnologias e ferramentas. Minha sede por conhecimento não se limita apenas à área técnica - sou um ávido leitor e acredito que o desenvolvimento pessoal é tão importante quanto o profissional.",
+        "Destaco-me por minhas excelentes habilidades de comunicação, que me permitem traduzir conceitos técnicos complexos em explicações claras e acessíveis. Além disso, mantenho um estilo de vida ativo, praticando exercícios regularmente, o que me ajuda a manter o equilíbrio e a energia necessária para enfrentar novos desafios."
       ]
     },
-    {
-      role: "Estagiário em DataOps",
-      company: "Driva",
-      period: "Fev 2022 – Jan 2024",
-      items: [
-        "Coleta avançada de dados com Scrapy, BeautifulSoup e Selenium (LinkedIn, Instagram, Facebook).",
-        "Ingestão e processamento com Azure Data Factory + PySpark para grandes volumes de dados.",
-        "Catalogação e documentação de dados no OpenMetadata.",
-        "Suporte a bancos NoSQL como ElasticSearch e MongoDB."
+    en: {
+      title: "About Me",
+      content: [
+        "I'm a 7th-semester Computer Engineering student at UTFPR, where I've distinguished myself through my natural curiosity and passion for technology.",
+        "As a lifelong learning enthusiast, I'm constantly challenging myself to master new technologies and tools. My thirst for knowledge extends beyond technical areas - I'm an avid reader and believe that personal development is just as important as professional growth.",
+        "I stand out for my excellent communication skills, which allow me to translate complex technical concepts into clear, accessible explanations. Additionally, I maintain an active lifestyle through regular exercise, helping me maintain the balance and energy needed to tackle new challenges."
       ]
     }
-  ];
+  };
 
   const projects = [
     {
@@ -76,6 +70,31 @@ export default function Home() {
     "GCP",
     "ElasticSearch", 
     "Machine Learning", "CI/CD", "Git", 
+  ];
+
+  const experiences = [
+    {
+      role: "Engenheiro de Dados Júnior",
+      company: "Driva",
+      period: "Fev 2024 – Nov 2024",
+      items: [
+        "Desenvolvimento de pipelines ETL/ELT escaláveis com Airflow, reduzindo em 30% o tempo de execução.",
+        "Administração de permissões e acessos para +20 usuários, garantindo segurança e integridade.",
+        "Mentoria de estagiários com treinamentos práticos, acelerando a curva de aprendizado.",
+        "Administração de ambientes com terabytes de dados e tabelas com +50M linhas."
+      ]
+    },
+    {
+      role: "Estagiário em DataOps",
+      company: "Driva",
+      period: "Fev 2022 – Jan 2024",
+      items: [
+        "Coleta avançada de dados com Scrapy, BeautifulSoup e Selenium (LinkedIn, Instagram, Facebook).",
+        "Ingestão e processamento com Azure Data Factory + PySpark para grandes volumes de dados.",
+        "Catalogação e documentação de dados no OpenMetadata.",
+        "Suporte a bancos NoSQL como ElasticSearch e MongoDB."
+      ]
+    }
   ];
 
   return (
@@ -122,12 +141,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* RESUMO */}
-        <section className={`space-y-4 backdrop-blur-3xl ${isDarkMode ? 'bg-white/5' : 'bg-white/70'} rounded-2xl p-8 border ${isDarkMode ? 'border-white/10' : 'border-slate-200'}`}>
-          <h2 className={`text-2xl font-semibold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>{t.professionalSummary}</h2>
-          <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-slate-700'} leading-relaxed`}>
-            {t.summary}
-          </p>
+        {/* SOBRE MIM */}
+        <section className="space-y-8">
+          <h2 className={`text-2xl font-semibold ${isDarkMode ? 'text-blue-400' : 'text-blue-600'}`}>
+            {language === 'pt' ? aboutMe.pt.title : aboutMe.en.title}
+          </h2>
+          <div className={`${isDarkMode ? 'bg-white/5' : 'bg-white/70'} rounded-2xl p-6 border ${isDarkMode ? 'border-white/10' : 'border-slate-200'} backdrop-blur-3xl`}>
+            {(language === 'pt' ? aboutMe.pt.content : aboutMe.en.content).map((paragraph, index) => (
+              <p key={index} className={`${isDarkMode ? 'text-gray-300' : 'text-slate-700'} mb-4 text-lg leading-relaxed`}>
+                {paragraph}
+              </p>
+            ))}
+          </div>
         </section>
 
         {/* EXPERIÊNCIA */}
